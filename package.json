@@ -10,7 +10,25 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@types/jest": "^24.0.12",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.7.1",
     "prettier": "^1.17.0",
+    "ts-jest": "^24.0.2",
     "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "TypedNpmModule": "evian-pring/TypedNpmModule#master"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!(TypedNpmModule|@felfel/restclient))"
+    ]
   }
 }
